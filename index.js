@@ -37,7 +37,9 @@ app.use(bodyParser.json());
 
 app.use("/api/user", userRoutes);
 app.use("/api/books", bookRoutes)
-
+app.get('/', (req, res) => {
+  res.send('Welcome into book shelf project')
+})
 
 app.listen(process.env.PORT, function () {
   console.log("Server is listening at port:" + process.env.PORT);
