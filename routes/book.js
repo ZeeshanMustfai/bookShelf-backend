@@ -3,7 +3,7 @@ const { requireAuth } = require("../middleware/authMiddleware");
 const Router = require("express").Router();
 
 Router.post('/create', requireAuth, AddNewBook)
-Router.get('/', requireAuth, GetAllBooks)
+Router.get('/', GetAllBooks)
 Router.put('/update', requireAuth, UpdateOneBook)
 Router.delete("/:id",requireAuth, DeleteOneBook)
 
