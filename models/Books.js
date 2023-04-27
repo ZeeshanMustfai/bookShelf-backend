@@ -5,7 +5,6 @@ const bookSchema = new schema({
   title: {
     type: String,
     required: true,
-    unique: true,
   },
   owner: {
     type: schema.Types.ObjectId, ref: 'user'
